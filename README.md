@@ -6,7 +6,7 @@ this a simple plugin for showing all the date and add new data into database.
 
 ### How to install?
 copy all this folder and past it in your wordpress instalation
-the folder must be named *abadata* (rename it after you clone it)
+the folder must be named **abadata** (rename it after you clone it)
 ```
 wp-content\plugins
 ```
