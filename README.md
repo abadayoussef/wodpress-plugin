@@ -1,5 +1,5 @@
 # wodpress-plugin
-This a made from scratch plugin usin BOILERPLATE oriented-object template
+This a made from scratch plugin using BOILERPLATE oriented-object template
 
 ## Add/show data plugn 
 this a simple plugin to show all the date and add new data to databasa.
