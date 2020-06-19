@@ -1,11 +1,12 @@
 # wodpress-plugin
-This a made from scratch plugin using BOILERPLATE oriented-object template
+This is a made from scratch plugin using BOILERPLATE oriented-object template
 
 ## Add/show data plugn 
-this a simple plugin to show all the date and add new data to database.
+this a simple plugin for showing all the date and add new data into database.
 
 ### How to install?
-copy all this folder and past it in your wordpress instalation 
+copy all this folder and past it in your wordpress instalation
+the folder must be named *abadata* (rename it after you clone it)
 ```
 wp-content\plugins
 ```
