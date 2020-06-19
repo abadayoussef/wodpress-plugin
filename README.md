@@ -12,6 +12,6 @@ wp-content\plugins
 and then go to your plugin managment plugin and activate it
 
 ### How it works?
-once you activate it you will notice it appearing in the dashpord menu
-it has two sub-menu one of them shows all the data if any, and the second one is to add new data
-you just have to ansert new data and click "add data"
+once you activate it you will notice it left side appearing in the dashboard menu
+it has two sub-menu one of them shows all the data (if any), and the second one is to add new data
+you just have to insert a new data and click "add data"
