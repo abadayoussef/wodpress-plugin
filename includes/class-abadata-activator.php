@@ -40,11 +40,16 @@ class Abadata_Activator
 			$query = 'CREATE TABLE `' . Abadata_Activator::abadaData_table() . '` (
 					 `id` int(11) NOT NULL AUTO_INCREMENT,
 					 `title` varchar(150) DEFAULT NULL,
-					 `discription` varchar(3000) DEFAULT NULL,
-					 `category` varchar(20) DEFAULT NULL,
+					 `description` varchar(3000) DEFAULT NULL,
+					 `version` varchar(20) DEFAULT NULL,
 					 PRIMARY KEY (`id`)
 					 ) ' . $wpdb->get_charset_collate();
 			dbDelta($query);
+			$wpdb->insert(Abadata_Activator::abadaData_table(), array(
+				"title" => 'Abadata Plugin',
+				"description" => "A simple demo plugin made for this brief, all what you can see here just this description and the version state of it, and the other sub-menu you can update this description, i hope you like it :)",
+				"version" => "Realize"
+			));
 		}
 	}
 

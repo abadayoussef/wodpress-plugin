@@ -65,20 +65,20 @@ class Abadata_Admin
 		$menu_title = "AbaData";
 		$capability = "manage_options";
 		$menu_slug = "aba-menus";
-		$function = "show_data";
+		$function = "show_description";
 		$icon = "dashicons-list-view";
 		$position = 30;
-		add_menu_page($page_title, $menu_title, $capability, $menu_slug . '-show-data', array($this, $function), $icon, $position);
-		add_submenu_page($menu_slug . '-show-data', "Show Data", "Show Data", $capability, $menu_slug . '-show-data', array($this, $function));
-		add_submenu_page($menu_slug . '-show-data', "Add Data", "Add Data", $capability, $menu_slug . '-add-data', array($this, 'add_data'));
+		add_menu_page($page_title, $menu_title, $capability, $menu_slug . '-show-description', array($this, $function), $icon, $position);
+		add_submenu_page($menu_slug . '-show-description', "Show Description", "Show Description", $capability, $menu_slug . '-show-description', array($this, $function));
+		add_submenu_page($menu_slug . '-show-description', "Update Description", "Update Description", $capability, $menu_slug . '-update-description', array($this, 'update_description'));
 	}
 
-	public function show_data()
+	public function show_description()
 	{
 		include_once(ABADATA_PLUGIN_DIR ."/admin/partials/show-data.php");
 	}
 
-	public function add_data()
+	public function update_description()
 	{
 		include_once(ABADATA_PLUGIN_DIR ."/admin/partials/add-data.php");
 	}
@@ -100,9 +100,7 @@ class Abadata_Admin
 	public function enqueue_scripts()
 	{
 		wp_enqueue_script("validate.min.js", plugin_dir_url(__FILE__) . 'js/jquery.validate.min.js', array('jquery'), $this->version, true);
-		wp_enqueue_script("notifyBar.js", plugin_dir_url(__FILE__) . 'js/jquery.notifyBar.js', array('jquery'), $this->version, true);
 		wp_enqueue_script("costume.js", plugin_dir_url(__FILE__) . 'js/costume.js', array('jquery'), $this->version, true);
-
 
 		wp_localize_script("costume.js", "abadata_ajax_url", admin_url("admin-ajax.php"));
 	}
@@ -111,17 +109,14 @@ class Abadata_Admin
 		global $wpdb;
 		$param = isset($_REQUEST['param']) ? $_REQUEST['param'] : "";
 		if(!empty($param) && $param == "sava_data"){
-			$wpdb->insert($this->table, array(
+			$wpdb->update($this->table, array(
 				"title" => $_REQUEST['title'],
-				"discription" => $_REQUEST['desc'],
-				"category" => $_REQUEST['category']
-			));
+				"description" => $_REQUEST['desc'],
+				"version" => $_REQUEST['version']
+			), array( 'id' => 1 ), array( '%s','%s','%s'), array( '%d' ));
 		}
-		if($wpdb->insert_id > 0){
-			echo "value has been inserted successfully :)";
-		}else{
-			echo "the data has not been inserted :(";
-		}
+		
+		echo "updated successfully :)";
 		wp_die();
 	}
 }
