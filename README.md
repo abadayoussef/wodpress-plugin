@@ -2,7 +2,7 @@
 This a made from scratch plugin using BOILERPLATE oriented-object template
 
 ## Add/show data plugn 
-this a simple plugin to show all the date and add new data to databasa.
+this a simple plugin to show all the date and add new data to database.
 
 ### How to install?
 copy all this folder and past it in your wordpress instalation 
