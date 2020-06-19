@@ -10,7 +10,7 @@ the folder must be named **abadata** (rename it after you clone it)
 ```
 wp-content\plugins
 ```
-and then go to your plugin managment plugin and activate it
+and then go to your plugin managment in wordpress dashboard and activate it by clicking **activate**
 
 ### How it works?
 once you activate it you will notice it left side appearing in the dashboard menu
