@@ -1,36 +1,8 @@
 <?php
 
-/**
- * Fired during plugin activation
- *
- * @link       https://sefeun.com
- * @since      1.0.0
- *
- * @package    Abadata
- * @subpackage Abadata/includes
- */
-
-/**
- * Fired during plugin activation.
- *
- * This class defines all code necessary to run during the plugin's activation.
- *
- * @since      1.0.0
- * @package    Abadata
- * @subpackage Abadata/includes
- * @author     Youssef Abada <youssef.abada.x@gmail.com>
- */
 class Abadata_Activator
 {
 
-
-	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
-	 *
-	 * @since    1.0.0
-	 */
 	public static function activate()
 	{
 		require_once(ABSPATH . "wp-admin/includes/upgrade.php");
