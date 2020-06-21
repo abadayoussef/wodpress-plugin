@@ -5,7 +5,7 @@ This is a very simple made from scratch plugin using BOILERPLATE oriented-object
 All this plugin do is showing a small description after you click on the plugin name **AbaData** from the menu, and you can change this description.
 
 ### How to install?
-1. copy **abadata**  folder and past it in your wordpress instalation under this following path:
+1. if you downloaded the project files, copy **abadata**  folder and past it in your wordpress instalation under this following path:
 ```
 wp-content\plugins
 ```
